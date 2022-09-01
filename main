@@ -1,0 +1,58 @@
+
+// For the first part of the question. 
+
+
+use rand::Rng;
+
+fn main() {
+let mut i = 0;
+let mut sum = 0;
+let base: u8 = 2;
+let mut num: u8=magic_number();
+    while i < 8 {
+    sum = sum + num *base.pow(i);
+    //println!("{}    {}",num,sum);
+    i = i + 1;
+    num = magic_number();
+    
+    }
+    println!("{}",sum);
+  
+}
+
+
+
+pub fn magic_number() -> u8 {
+    let mut rng = rand::thread_rng();
+
+    rng.gen_range(0..=1)
+}
+
+// for the second part.......................
+use rand::Rng;
+
+fn main() {
+let mut i = 0;
+let mut sum = 0;
+let base: u8 = 2;
+let mut num: u8=magic_number();
+    while i < 8 {
+    sum = sum + num *base.pow(i);
+    //println!("{}    {}",num,sum);
+    i = i + 1;
+    num = magic_number();
+    
+    }
+   // println!("{}",sum);
+    println!("{}",sum%232);
+
+  
+}
+
+
+
+pub fn magic_number() -> u8 {
+    let mut rng = rand::thread_rng();
+
+    rng.gen_range(0..=1)
+}
